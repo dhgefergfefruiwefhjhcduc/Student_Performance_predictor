@@ -1,0 +1,4 @@
+[2025-07-20 14:38:05,237] - INFO - root - Entered to Data Ingestion
+[2025-07-20 14:38:05,240] - INFO - root - Reading the dataset as dataframe
+[2025-07-20 14:38:05,243] - INFO - root - Started Train Test Split
+[2025-07-20 14:38:05,246] - INFO - root - Train and Test  data are saved successfully

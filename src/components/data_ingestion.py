@@ -6,7 +6,8 @@ import os
 import sys
 from src.exception import CustomException
 from src.logger import logging
-
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 from dataclasses import dataclass
 
 class DataIngestionConfig:
@@ -30,11 +31,18 @@ class DataIngestion:
             train_set.to_csv(self.ingestionconfig.train_data_path,index=False,header=True)
             test_set.to_csv(self.ingestionconfig.test_data_path,index=False,header=True)
             logging.info("Train and Test  data are saved successfully")
+            return (
+                self.ingestionconfig.train_data_path,self.ingestionconfig.test_data_path
+            )
         except Exception as e:
             raise CustomException(e,sys)
 
 if __name__=="__main__":
     print("Starting data ingestion...")
     obj = DataIngestion()
-    obj.initiate_data_ingestion()
-    print("Data ingestion completed.")
+    train_data,test_data=obj.initiate_data_ingestion()
+
+    data_transformation=DataTransformation()
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    

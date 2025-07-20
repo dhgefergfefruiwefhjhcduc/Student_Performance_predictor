@@ -1,0 +1,8 @@
+[2025-07-20 19:16:56,118] - INFO - root - Entered to Data Ingestion
+[2025-07-20 19:16:56,126] - INFO - root - Reading the dataset as dataframe
+[2025-07-20 19:16:56,134] - INFO - root - Started Train Test Split
+[2025-07-20 19:16:56,137] - INFO - root - Train and Test  data are saved successfully
+[2025-07-20 19:16:56,140] - INFO - root - Read train and test data completed
+[2025-07-20 19:16:56,140] - INFO - root - Obtaining preprocessing object
+[2025-07-20 19:16:56,140] - INFO - root - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2025-07-20 19:16:56,140] - INFO - root - Numerical columns: ['writing_score', 'reading_score']

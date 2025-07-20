@@ -3,4 +3,9 @@ numpy
 seaborn
 scikit-learn
 setuptools
+matplotlib
+catboost
+xgboost
+Flask
+dill
 # -e.

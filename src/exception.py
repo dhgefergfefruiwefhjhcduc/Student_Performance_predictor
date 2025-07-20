@@ -1,15 +1,6 @@
 import sys,os
-import logging
-from datetime import datetime
-LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}"
-logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE)
-LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE)
-os.makedirs(logs_path,exist_ok=True)
-logging.basicConfig(
-    filename=LOG_FILE_PATH,
-    level=logging.INFO,
-    format="[%(asctime)s] - %(levelname)s - %(name)s - %(message)s"
-)
+from src.logger import logging
+
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
     file_name=exc_tb.tb_frame.f_code.co_filename
